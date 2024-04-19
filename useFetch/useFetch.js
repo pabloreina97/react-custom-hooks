@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { findAllInRenderedTree } from 'react-dom/test-utils';
 
 const localCache = {};
 
@@ -26,7 +25,7 @@ export const useFetch = (url) => {
       error: null,
     });
   };
-  
+
   // Función que actualiza el estado con los datos.
   const getFetch = async () => {
     if (localCache[url]) {
@@ -70,7 +69,7 @@ export const useFetch = (url) => {
     // Guardar en caché
     localCache[url] = data;
 
-    console.log(localCache)
+    console.log(localCache);
   };
 
   return {
